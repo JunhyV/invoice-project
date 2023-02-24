@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header{
+    display: flex;
+    &__title{}
+    &__btns{}
+    &__filter{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn{}
+    &__plus{}
+}

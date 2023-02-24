@@ -1,0 +1,8 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem v.$mb-padding;
+}

@@ -1,33 +1,51 @@
-@use 'variables' as v;
+@use "variables" as v;
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after{
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font: 1.6rem v.$font;
+body {
+  width: 100vw;
+  font: 1.6rem v.$font;
 }
 
-h1{
-    font-size: 3.2rem;
-    line-height: 3.6rem;
-}
-h2{
+h1 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+
+  @media (max-width: 767px) {
     font-size: 2rem;
-    line-height: 2.2rem;
+    line-height: 22.4rem;
+  }
 }
-h3{
+h2 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+
+  @media (max-width: 767px) {
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 24rem;
+  }
 }
-p{
+h3 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @media (max-width: 767px) {
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
 }
-
-
+p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}

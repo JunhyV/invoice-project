@@ -5,6 +5,11 @@ J.Change 1
 1.- Agregados redux tlk, persist, thunk, vitest, jsdom y react-testing
 2.- Establecida tienda para dark mode
 
+J.Change 2
+1.- Agregada y diseñada Barra lateral
+2.- A gregados elementos del header en Home
+3.- Agregadas configuraciones de SASS
+
 Chito
 C.Change 1
 1.-

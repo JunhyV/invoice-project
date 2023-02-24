@@ -1,0 +1,30 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.aside {
+  display: flex;
+  background-color: v.$aside;
+  height: 7.2rem;
+
+  &__content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 2px solid v.$line;
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    padding: v.$mb-padding;
+  }
+
+  &__avatar{
+    padding: v.$mb-padding;
+  }
+  &__img {
+    width: 3.2rem;
+    border-radius: 50%;
+  }
+}

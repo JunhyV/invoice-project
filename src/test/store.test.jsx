@@ -15,7 +15,7 @@ describe("Store", () => {
   });
 
   test("should change value", () => {
-    const action = { type: "darkMode/test", payload: false };
+    const action = { type: "darkMode/changeMode" };
     const state = darkModeReducer(initialState, action);
     expect(state).toEqual(expectedState);
   });
