@@ -1,4 +1,4 @@
-Anotar cambios en versiones
+Notas de cambios
 
 Junhy
 J.Change 1
@@ -10,6 +10,8 @@ J.Change 2
 2.- A gregados elementos del header en Home
 3.- Agregadas configuraciones de SASS
 
-Chito
-C.Change 1
-1.-
+Version 1.3
+1.-Completado estilos del Home/InvoiceContainer/Header/Empty
+2.-Configurado el dark mode en carpeta SASS
+3.-Arreglada la tienda para guardar en localStorage el store
+4.-Agregados mixins y utils

@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.link {
+  text-decoration: none;
+  color: v.$black;
+}
+.color-gray {
+  color: v.$gray;
+}
+.color-dark-gray {
+  color: v.$dark-gray;
+  font-weight: bold;
+}

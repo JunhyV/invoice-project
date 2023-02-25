@@ -1,0 +1,33 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.invoice-container {
+  background-color: v.$white;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 0.8rem;
+  padding: v.$mb-padding;
+  @include m.grid(2, v.$mb-padding);
+  align-items: center;
+  & p:nth-child(2) {
+    text-align: right;
+  }
+
+  &__status--green {
+    @include m.statusContainer(v.$light-green, v.$green);
+  }
+  &__circle--green {
+    @include m.circle(v.$green);
+  }
+  &__status--yellow {
+    @include m.statusContainer(v.$light-yellow, v.$yellow);
+  }
+  &__circle--yellow {
+    @include m.circle(v.$yellow);
+  }
+  &__status--black {
+    @include m.statusContainer(v.$light-aside, v.$aside);
+  }
+  &__circle--black {
+    @include m.circle(v.$aside);
+  }
+}

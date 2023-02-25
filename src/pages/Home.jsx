@@ -1,14 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Empty from '../components/Empty'
 import Header from '../components/Header'
 import InvoiceContainer from '../components/InvoiceContainer'
 
 const Home = () => {
+  //Si darkmode es true entonces se dara la clase darkmode al Home
   return (
     <div className='home'>
-      go to <Link to={'/invoice'}>invoice</Link>
       <Header/>
       <InvoiceContainer/>
+      <Empty/>
     </div>
   )
 }

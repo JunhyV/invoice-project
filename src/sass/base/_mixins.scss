@@ -1,30 +1,54 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 //Grid and Flex
-@mixin grid($column, $space){
-    display: grid;
-    grid-template-columns: repeat($column, 1fr);
-    gap: $space;
+@mixin grid($column, $space) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  gap: $space;
 }
-@mixin flex($space){
-    display: flex;
-    flex-direction: column;
-    gap: $space;
+@mixin flex($space) {
+  display: flex;
+  flex-direction: column;
+  gap: $space;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 //Media Queries
-@mixin mobile{
-    @media (min-width: v.$mobile) {
-        @content;
-    }   
+@mixin mobile {
+  @media (min-width: v.$mobile) {
+    @content;
+  }
 }
-@mixin tablet{
-    @media (min-width: v.$mobile) {
-        @content;
-    }   
+@mixin tablet {
+  @media (min-width: v.$mobile) {
+    @content;
+  }
 }
-@mixin desktop{
-    @media (min-width: v.$mobile) {
-        @content;
-    }   
+@mixin desktop {
+  @media (min-width: v.$mobile) {
+    @content;
+  }
+}
+
+//Status Container
+@mixin statusContainer($bg, $color) {
+  background: $bg;
+  border-radius: 0.6rem;
+  width: 10.4rem;
+  height: 4rem;
+  gap: v.$mb-padding;
+  color: $color;
+  @include flex-center;
+}
+
+//Figures
+@mixin circle($color) {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: $color;
+  border-radius: 50%;
 }

@@ -16,6 +16,7 @@ html {
 body {
   width: 100vw;
   font: 1.6rem v.$font;
+  background-color: v.$bg-white;
 }
 
 h1 {
@@ -24,7 +25,7 @@ h1 {
 
   @media (max-width: 767px) {
     font-size: 2rem;
-    line-height: 22.4rem;
+    line-height: 2.4rem;
   }
 }
 h2 {
@@ -33,7 +34,7 @@ h2 {
 
   @media (max-width: 767px) {
     font-size: 1.6rem;
-    line-height: 24rem;
+    line-height: 2.4rem;
   }
 }
 h3 {
@@ -48,4 +49,7 @@ h3 {
 p {
   font-size: 1.2rem;
   line-height: 1.5rem;
+}
+button:hover{
+  cursor: pointer;
 }

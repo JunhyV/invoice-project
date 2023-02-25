@@ -1,0 +1,13 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.empty{
+    padding: v.$mb-padding;
+    @include m.flex(2rem);
+    align-items: center;
+    text-align: center;
+
+    & p{
+        width: 18rem;
+    }
+}

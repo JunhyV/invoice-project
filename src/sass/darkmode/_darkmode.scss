@@ -1,0 +1,21 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.darkmode {
+    background-color: v.$darkmode-bg;
+    color: v.$white;
+  
+    .color-gray {
+      color: v.$darkmode-gray;
+    }
+  
+    .color-dark-gray {
+      color: v.$dark-gray;
+      font-weight: bold;
+    }
+
+    .invoice-container{
+        background-color: v.$darkmode-container;
+        color: v.$white;
+    }
+  }

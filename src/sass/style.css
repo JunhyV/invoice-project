@@ -14,6 +14,7 @@ html {
 body {
   width: 100vw;
   font: 1.6rem "League Spartan", sans-serif;
+  background-color: #F8F8FB;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
 @media (max-width: 767px) {
   h1 {
     font-size: 2rem;
-    line-height: 22.4rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -34,7 +35,7 @@ h2 {
 @media (max-width: 767px) {
   h2 {
     font-size: 1.6rem;
-    line-height: 24rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -52,6 +53,24 @@ h3 {
 p {
   font-size: 1.2rem;
   line-height: 1.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: #0C0E16;
+}
+
+.color-gray {
+  color: #7E88C3;
+}
+
+.color-dark-gray {
+  color: #888EB0;
+  font-weight: bold;
 }
 
 .aside {
@@ -72,7 +91,7 @@ p {
   padding: 2.4rem;
 }
 .aside__avatar {
-  padding: 2.4rem;
+  padding: 2rem;
 }
 .aside__img {
   width: 3.2rem;
@@ -104,14 +123,138 @@ p {
 .home {
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
   padding: 3.2rem 2.4rem;
 }
 
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__btns {
+  display: flex;
+  gap: 1.5rem;
 }
 .header__filter {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
+}
+.header__btn {
+  width: 9rem;
+  background-color: #7C5DFA;
+  color: #FFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 0.6rem;
+  border-radius: 2.4rem;
+}
+.header__btn:hover {
+  background-color: #9277FF;
+}
+.header__plus {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invoice-container {
+  background-color: #FFF;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+}
+.invoice-container p:nth-child(2) {
+  text-align: right;
+}
+.invoice-container__status--green {
+  background: rgba(70, 218, 169, 0.1529411765);
+  border-radius: 0.6rem;
+  width: 10.4rem;
+  height: 4rem;
+  gap: 2.4rem;
+  color: #33D69F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-container__circle--green {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #33D69F;
+  border-radius: 50%;
+}
+.invoice-container__status--yellow {
+  background: rgba(255, 145, 0, 0.1725490196);
+  border-radius: 0.6rem;
+  width: 10.4rem;
+  height: 4rem;
+  gap: 2.4rem;
+  color: #FF8F00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-container__circle--yellow {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #FF8F00;
+  border-radius: 50%;
+}
+.invoice-container__status--black {
+  background: rgba(55, 59, 83, 0.1568627451);
+  border-radius: 0.6rem;
+  width: 10.4rem;
+  height: 4rem;
+  gap: 2.4rem;
+  color: #373B53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-container__circle--black {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #373B53;
+  border-radius: 50%;
+}
+
+.empty {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.empty p {
+  width: 18rem;
+}
+
+.darkmode {
+  background-color: #141625;
+  color: #FFF;
+}
+.darkmode .color-gray {
+  color: #DFE3FA;
+}
+.darkmode .color-dark-gray {
+  color: #888EB0;
+  font-weight: bold;
+}
+.darkmode .invoice-container {
+  background-color: #1E2139;
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */

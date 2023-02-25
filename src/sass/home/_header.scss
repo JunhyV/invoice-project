@@ -3,13 +3,40 @@
 
 .header{
     display: flex;
-    &__title{}
-    &__btns{}
+    align-items: center;
+    justify-content: space-between;
+    
+    &__btns{
+        display: flex;
+        gap: 1.5rem;
+    }
     &__filter{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 1rem;
     }
-    &__btn{}
-    &__plus{}
+    &__btn{
+        width: 9rem;
+        background-color: v.$purple;
+        color: v.$white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        padding: 0.6rem;
+        border-radius: 2.4rem;
+
+        &:hover{
+            background-color: v.$light-purple;
+        }
+    }
+
+    &__plus{
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        background-color: v.$white;
+        @include m.flex-center;
+    }
 }

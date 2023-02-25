@@ -16,4 +16,5 @@ export const darkModeSlice = createSlice({
 })
 
 export const { changeMode} = darkModeSlice.actions;
+export const selectCounter = (state) => console.log(state.counter);
 export const darkModeReducer = darkModeSlice.reducer;
