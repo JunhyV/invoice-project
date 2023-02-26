@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
   font: 1.6rem "League Spartan", sans-serif;
   background-color: #F8F8FB;
 }
@@ -73,6 +73,40 @@ button:hover {
   font-weight: bold;
 }
 
+.input-date {
+  position: relative;
+}
+.input-date__open-btn {
+  position: absolute;
+  top: 3.65rem;
+  right: 1.25rem;
+  z-index: 3;
+  pointer-events: none;
+}
+.input-date__btn {
+  background-color: #FFF;
+  border: none;
+}
+
+.input-text {
+  position: relative;
+}
+.input-text__open-btn {
+  position: absolute;
+  top: 3.65rem;
+  right: 1.25rem;
+  z-index: 3;
+  pointer-events: none;
+}
+.input-text__btn {
+  background-color: #FFF;
+  border: none;
+}
+
+.btn {
+  height: 4.8rem;
+}
+
 .aside {
   display: flex;
   background-color: #373B53;
@@ -125,6 +159,7 @@ button:hover {
   flex-direction: column;
   gap: 2.4rem;
   padding: 3.2rem 2.4rem;
+  position: relative;
 }
 
 .header {
@@ -171,6 +206,7 @@ button:hover {
   box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   border-radius: 0.8rem;
   padding: 2.4rem;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.4rem;
@@ -254,7 +290,251 @@ button:hover {
   color: #888EB0;
   font-weight: bold;
 }
+.darkmode .invoice {
+  background-color: #141625;
+}
 .darkmode .invoice-container {
   background-color: #1E2139;
   color: #FFF;
+}
+.darkmode .invoice-form__fake-input {
+  background-color: #252945;
+  border: 0.2rem solid #1E2139;
+}
+.darkmode__h3 {
+  color: #FFF;
+}
+.darkmode .invoice input {
+  background-color: #252945;
+  color: white;
+  border: 0.2rem solid #1E2139;
+}
+.darkmode .invoice input::-moz-placeholder {
+  color: white;
+}
+.darkmode .invoice input::placeholder {
+  color: white;
+}
+.darkmode .invoice-form__add-item {
+  background-color: #252945;
+  color: #888EB0;
+}
+.darkmode .invoice__discard {
+  background-color: #252945;
+  color: #DFE3FA;
+}
+.darkmode .invoice__discard:hover {
+  background-color: #FFF;
+}
+.darkmode .invoice__draft {
+  color: #DFE3FA;
+}
+.darkmode .invoice__draft:hover {
+  background-color: #1E2139;
+}
+.darkmode .payment {
+  background: #252945;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+.darkmode .payment div {
+  color: #FFF;
+}
+
+.invoice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+.invoice__close-btn {
+  margin: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.invoice__down-gradient {
+  width: 100%;
+  height: 6.4rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.invoice__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem;
+}
+.invoice__discard {
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1rem;
+  background-color: #F8F8FB;
+  color: #7E88C3;
+}
+.invoice__discard:hover {
+  background-color: #DFE3FA;
+  cursor: pointer;
+}
+.invoice__draft {
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1rem;
+  background-color: #373B53;
+  color: #888EB0;
+}
+.invoice__draft:hover {
+  background-color: #0C0E16;
+  cursor: pointer;
+}
+.invoice__save {
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1rem;
+  background-color: #7C5DFA;
+  color: #FFF;
+}
+.invoice__save:hover {
+  background-color: #9277FF;
+  cursor: pointer;
+}
+
+.invoice-form {
+  padding: 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+.invoice-form__bill-from, .invoice-form__bill-to {
+  width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+.invoice-form__bill-from div:nth-child(3n+1) {
+  grid-column: 1/3;
+}
+.invoice-form__bill-to div:nth-child(1n) {
+  grid-column: 1/3;
+}
+.invoice-form__bill-to div:nth-child(4) {
+  grid-column: 1/2;
+}
+.invoice-form__bill-to div:nth-child(5) {
+  grid-column: 2/3;
+}
+.invoice-form__item-list {
+  width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-form__item-list div:nth-child(1) {
+  grid-column: 1/5;
+}
+.invoice-form__item-list img {
+  align-self: center;
+  justify-self: center;
+}
+.invoice-form__item-list img:hover {
+  cursor: pointer;
+}
+.invoice-form__input-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.invoice-form__add-item {
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1rem;
+  background-color: #F8F8FB;
+  color: #7E88C3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-form__add-item:hover {
+  background-color: #DFE3FA;
+  cursor: pointer;
+}
+.invoice-form__selector {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.invoice-form__fake-input {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 0.2rem solid #DFE3FA;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.invoice-form__fake-input:hover {
+  cursor: pointer;
+  border: 0.2rem solid #7C5DFA;
+}
+.invoice-form label {
+  color: #7E88C3;
+}
+.invoice-form input {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 0.2rem solid #DFE3FA;
+  border-radius: 0.4rem;
+  outline-color: #7C5DFA;
+}
+.invoice-form h3 {
+  color: #7C5DFA;
+}
+
+.payment {
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -15rem;
+  right: 0;
+  background-color: #FFF;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  border-radius: 0.8rem;
+}
+.payment div {
+  background-color: transparent;
+  padding: 1rem;
+  color: black;
+  border: none;
+}
+.payment div:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

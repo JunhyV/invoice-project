@@ -1,8 +1,8 @@
 import React from "react";
-import arrowDown from "../assets/icon-arrow-down.svg";
-import plus from "../assets/icon-plus.svg";
+import arrowDown from "../../assets/icon-arrow-down.svg";
+import plus from "../../assets/icon-plus.svg";
 
-const Header = () => {
+const Header = ({data, set}) => {
   return (
     <header className="header">
       <div>
@@ -14,7 +14,7 @@ const Header = () => {
           <h3>Filter</h3>
           <img src={arrowDown} alt="filter-arrow" />
         </div>
-        <button className="header__btn">
+        <button className="header__btn" onClick={() => set(!data)}>
           <div className="header__plus">
             <img src={plus} alt="btn-plus" />
           </div>

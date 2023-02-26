@@ -4,10 +4,50 @@
   text-decoration: none;
   color: v.$black;
 }
+
 .color-gray {
   color: v.$gray;
 }
+
 .color-dark-gray {
   color: v.$dark-gray;
   font-weight: bold;
+}
+
+.input-date {
+  position: relative;
+
+  &__open-btn {
+    position: absolute;
+    top: 3.65rem;
+    right: 1.25rem;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__btn {
+    background-color: v.$white;
+    border: none;
+  }
+}
+
+.input-text {
+  position: relative;
+
+  &__open-btn {
+    position: absolute;
+    top: 3.65rem;
+    right: 1.25rem;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__btn {
+    background-color: v.$white;
+    border: none;
+  }
+}
+
+.btn{
+  height: 4.8rem;
 }

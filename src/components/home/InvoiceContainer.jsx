@@ -13,7 +13,7 @@ const InvoiceContainer = () => {
         <h2>£ 1,800.90</h2>
       </div>
       <div className="invoice-container__status--green">
-        <div className="invoice-container__circle--green"></div>
+        <div className="invoice-container__circle--green"/>
         <h3>Paid</h3>
       </div>
     </Link>

@@ -1,0 +1,106 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.invoice-form {
+  padding: 0 v.$mb-padding;
+  @include m.flex(v.$mb-padding);
+  width: 100%;
+
+  &__bill-from,
+  &__bill-to {
+    width: 100%;
+    @include m.grid(2, v.$mb-padding);
+  }
+
+  &__bill-from {
+    & div:nth-child(3n + 1) {
+      grid-column: 1/3;
+    }
+  }
+
+  &__bill-to {
+    & div:nth-child(1n) {
+      grid-column: 1/3;
+    }
+    & div:nth-child(4) {
+      grid-column: 1/2;
+    }
+    & div:nth-child(5) {
+      grid-column: 2/3;
+    }
+  }
+
+  &__item-list {
+    width: 100%;
+    @include m.grid(4, v.$mb-padding);
+    align-items: center;
+    justify-content: center;
+    
+
+    & div:nth-child(1) {
+      grid-column: 1/5;
+    }
+    & img {
+      align-self: center;
+      justify-self: center;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__input-container {
+    height: 100%;
+    @include m.flex(1rem);
+
+  }
+
+  &__add-item {
+    @include m.invoiceContainer(v.$bg-white, v.$gray, v.$darkmode-gray);
+    @include m.flex-center;
+  }
+
+  &__selector {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  &__fake-input{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 0.2rem solid v.$darkmode-gray;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+      border: 0.2rem solid v.$purple;
+    }
+  }
+
+  & label {
+    color: v.$gray;
+  }
+
+  & input {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 0.2rem solid v.$darkmode-gray;
+    border-radius: .4rem;
+    outline-color: v.$purple;
+  }
+
+  & h3 {
+    color: v.$purple;
+  }
+}
+
+
+

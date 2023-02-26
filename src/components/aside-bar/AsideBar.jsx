@@ -7,14 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeMode } from "../../redux/slice/darkModeSlice";
 
 const AsideBar = () => {
-  const state = useSelector((state) => state.darkModeState);
-  const { value } = state;
-  
-  if (value) {
-    document.body.classList.add('darkmode')
-  } else{
-    document.body.classList = '';
-  }
+  //Se aplica la clase darkmode directamente al body cuando el valor en redux/store se vuelve true
+  const value = useSelector((state) => state.darkModeState.value);
+  value ? document.body.classList.add('darkmode') : document.body.classList = '';
 
   const dispatch = useDispatch();
   return (

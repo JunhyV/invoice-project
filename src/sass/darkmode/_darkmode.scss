@@ -1,21 +1,68 @@
-@use '../base/variables' as v;
-@use '../base/mixins' as m;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .darkmode {
-    background-color: v.$darkmode-bg;
-    color: v.$white;
-  
-    .color-gray {
-      color: v.$darkmode-gray;
-    }
-  
-    .color-dark-gray {
-      color: v.$dark-gray;
-      font-weight: bold;
-    }
+  background-color: v.$darkmode-bg;
+  color: v.$white;
 
-    .invoice-container{
-        background-color: v.$darkmode-container;
-        color: v.$white;
+  .color-gray {
+    color: v.$darkmode-gray;
+  }
+
+  .color-dark-gray {
+    color: v.$dark-gray;
+    font-weight: bold;
+  }
+
+  .invoice {
+    background-color: v.$darkmode-bg;
+  }
+  .invoice-container {
+    background-color: v.$darkmode-container;
+    color: v.$white;
+  }
+
+  .invoice-form__fake-input {
+    background-color: v.$darkmode-input;
+    border: 0.2rem solid v.$darkmode-container;
+  }
+  &__h3 {
+    color: v.$white;
+  }
+
+  .invoice input {
+    background-color: v.$darkmode-input;
+    color: white;
+    border: 0.2rem solid v.$darkmode-container;
+
+    &::placeholder {
+      color: white;
     }
   }
+  .invoice-form__add-item {
+    background-color: v.$darkmode-input;
+    color: v.$dark-gray;
+  }
+
+  .invoice__discard {
+    background-color: v.$darkmode-input;
+    color: v.$darkmode-gray;
+    &:hover {
+      background-color: v.$white;
+    }
+  }
+  .invoice__draft {
+    color: v.$darkmode-gray;
+    &:hover {
+      background-color: v.$darkmode-container;
+    }
+  }
+
+  .payment {
+    background: v.$darkmode-input;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    & div {
+      color: v.$white;
+    }
+  }
+}

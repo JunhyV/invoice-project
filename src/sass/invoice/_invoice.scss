@@ -1,0 +1,49 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.invoice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: v.$white;
+  @include m.flex(0);
+  align-items: flex-start;
+
+  &__close-btn {
+    margin: v.$mb-padding;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__down-gradient {
+    width: 100%;
+    height: 6.4rem;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.0001) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: v.$mb-padding;
+  }
+  
+  &__discard {
+    @include m.invoiceContainer(v.$bg-white, v.$gray, v.$darkmode-gray);
+  }
+  &__draft {
+    @include m.invoiceContainer(v.$aside, v.$dark-gray, v.$black);
+  }
+  &__save {
+    @include m.invoiceContainer(v.$purple, v.$white, v.$light-purple);
+  }
+}

@@ -2,6 +2,7 @@
 
 //Grid and Flex
 @mixin grid($column, $space) {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat($column, 1fr);
   gap: $space;
@@ -51,4 +52,19 @@
   height: 0.8rem;
   background-color: $color;
   border-radius: 50%;
+}
+
+@mixin invoiceContainer($bg, $color, $hover) {
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1rem;
+  background-color: $bg;
+  color: $color;
+  &:hover {
+    background-color: $hover;
+    cursor: pointer;
+  }
 }

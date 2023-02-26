@@ -1,13 +1,15 @@
-import React from 'react'
-import Empty from '../components/Empty'
-import Header from '../components/Header'
-import InvoiceContainer from '../components/InvoiceContainer'
+import React, { useState } from 'react'
+import Empty from '../components/home/Empty'
+import Header from '../components/home/Header'
+import InvoiceContainer from '../components/home/InvoiceContainer'
+import Invoice from '../components/invoice/Invoice'
 
 const Home = () => {
-  //Si darkmode es true entonces se dara la clase darkmode al Home
+  const [displayNew, setDisplayNew] = useState(false);
   return (
     <div className='home'>
-      <Header/>
+      {displayNew ? <Invoice data={displayNew} set={setDisplayNew}/> : null}
+      <Header data={displayNew} set={setDisplayNew}/>
       <InvoiceContainer/>
       <Empty/>
     </div>
