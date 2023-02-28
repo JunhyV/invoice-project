@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.calendar {
+  position: absolute;
+  top: 7rem;
+  right: 0;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  border-radius: 8px;
+  padding: v.$mb-padding;
+  @include m.flex(2rem);
+  width: 24rem;
+
+  &__month {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & img:hover {
+      cursor: pointer;
+    }
+  }
+  &__days {
+    @include m.flex(1rem);
+  }
+
+  &__grid-days,
+  &__grid-date {
+    @include m.grid(7, 1rem);
+    align-items: center;
+    justify-items: center;
+    & li {
+      font-size: 1.2rem;
+    }
+  }
+  &__available {
+    &:hover {
+      color: v.$purple;
+      cursor: pointer;
+    }
+  }
+  .active {
+    color: v.$purple;
+  }
+
+  &__inactive {
+    color: v.$dark-gray;
+    &:hover {
+      color: v.$dark-gray;
+    }
+  }
+}

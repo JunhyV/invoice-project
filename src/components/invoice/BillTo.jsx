@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import arrowDown from "../../assets/icon-arrow-down.svg";
-import calendar from "../../assets/icon-calendar.svg";
+import calendarIcon from "../../assets/icon-calendar.svg";
+import Calendar from "./Calendar";
 import Payment from "./Payment";
 
 const BillTo = () => {
-  const [payment, setPayment] = useState(false)
+  const [payment, setPayment] = useState(false);
+  const [calendar, setCalendar] = useState(false);
   return (
     <div className="invoice-form__bill-to">
       <div className="invoice-form__input-container">
@@ -45,10 +47,11 @@ const BillTo = () => {
 
       <div className="invoice-form__input-container input-date">
         <label>Invoice Date</label>
-        <div className="invoice-form__fake-input">
+        <div className="invoice-form__fake-input" onClick={() => setCalendar(!calendar)}>
           21 Aug 2021
-            <img src={calendar} alt="calendar-img" />
+            <img src={calendarIcon} alt="calendar-img" />
         </div>
+        {calendar ? <Calendar/> : null}
       </div>
       {/* Invoice Date */}
 

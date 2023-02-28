@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Empty from '../components/home/Empty'
 import Header from '../components/home/Header'
 import InvoiceContainer from '../components/home/InvoiceContainer'
+import Calendar from '../components/invoice/Calendar'
 import Invoice from '../components/invoice/Invoice'
 
 const Home = () => {
