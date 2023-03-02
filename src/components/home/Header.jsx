@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import arrowDown from "../../assets/icon-arrow-down.svg";
 import plus from "../../assets/icon-plus.svg";
 import FilterByStatus from "./FilterByStatus";
 
 const Header = ({data, set}) => {
+  const invoices = useSelector(state => state.invoiceState.invoices);
   const [filter, setFilter] = useState(false);
   return (
     <header className="header">
       <div>
         <h1>Invoices</h1>
-        <p className="color-gray">x invoices</p>
+        <p className="color-gray">{invoices.length} invoices</p>
       </div>
       <div className="header__btns">
         <div className="header__filter" onClick={()=> setFilter(!filter)}>

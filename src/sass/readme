@@ -1,3 +1,0 @@
-1.- La pagina esta configurada para que 1rem = 10px;
-2.- Correr extension "Live SASS compiler" para que se ejecuten los cambios.
-3.- Usar metodologia BEM para crear clases "header" - "header__navbar" - "header__link" - "header__link--red"

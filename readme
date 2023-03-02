@@ -1,34 +1,29 @@
-Notas de cambios
+# Notas de cambios
+## Versiones
+|Version|Changes|
+|-------|-------|
+|**J.Change 1**|1. Agregados redux tlk, persist, thunk, vitest, jsdom y react-testing<br>2. Establecida tienda para dark mode|
+|**J.Change 2**|1. Agregada y diseñada Barra lateral<br>2. A gregados elementos del header en Home<br>3. Agregadas configuraciones de SASS|
+|**Version 1.3**|1. Completado estilos del Home/InvoiceContainer/Header/Empty<br>2.Configurado el dark mode en carpeta SASS<br>3. Arreglada la tienda para guardar en localStorage el store<br>4.Agregados mixins y utils|
+|**Version 1.4**|1.Agregado y diseñado InvoiceForm<br>2.Aun no obtiene sus funcionalidades<br>3.El boton New ya despliega el componente invoice<br>4.Agregados componentes Payment y Calendar<br>5. Todo el home adapatado a darkmode|
+|**Version 1.5**|1.- Agregado el calendario<br>2.- Calendario funcionando|
+|**Version 1.6**|1.- Establecido useCalendar<br>2.- Establecido componente filter<br>3.- Arreglado los inputs<br>4.- Finalizado el calendario|
+|**Version 1.7**|1. Guardado el *data.json* en tienda redux<br>2. Desplegados invoice container con contenido del la tienda<br>3. Añadido Markdown al readme de versiones|
 
-Junhy
-J.Change 1
-1.- Agregados redux tlk, persist, thunk, vitest, jsdom y react-testing
-2.- Establecida tienda para dark mode
+> ctrl + shift + v para ver version de github
 
-J.Change 2
-1.- Agregada y diseñada Barra lateral
-2.- A gregados elementos del header en Home
-3.- Agregadas configuraciones de SASS
 
-Version 1.3
-1.-Completado estilos del Home/InvoiceContainer/Header/Empty
-2.-Configurado el dark mode en carpeta SASS
-3.-Arreglada la tienda para guardar en localStorage el store
-4.-Agregados mixins y utils
 
-Version 1.4
-1.-Agregado y diseñado InvoiceForm
-2.-Aun no obtiene sus funcionalidades
-3.-El boton New ya despliega el componente invoice
-4.-Agregados componentes Payment y Calendar
-5.- Todo el home adapatado a darkmode
 
-Version 1.5
-1.- Agregado el calendario
-2.- Calendario funcionando
 
-Version 1.6
-1.- Establecido useCalendar
-2.- Establecido componente filter 
-3.- Arreglado los inputs
-4.- Finalizado el calendario
+
+
+
+
+
+
+
+
+
+
+

@@ -226,6 +226,12 @@ li {
 .invoice-container p:nth-child(2) {
   text-align: right;
 }
+.invoice-container div:nth-child(4) {
+  justify-self: end;
+}
+.invoice-container__status--green, .invoice-container__status--yellow, .invoice-container__status--black {
+  text-transform: capitalize;
+}
 .invoice-container__status--green {
   background: rgba(70, 218, 169, 0.1529411765);
   border-radius: 0.6rem;
@@ -407,6 +413,12 @@ li {
 .darkmode .filter-by-status__square {
   background: #1e2139;
   border-radius: 2px;
+}
+.darkmode .invoice-container__status--black {
+  color: #FFF;
+}
+.darkmode .invoice-container__circle--black {
+  background-color: #FFF;
 }
 
 .invoice {

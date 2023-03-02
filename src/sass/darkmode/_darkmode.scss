@@ -86,4 +86,10 @@
       border-radius: 2px;
     }
   }
+  .invoice-container__status--black{
+    color: v.$white;
+  }
+  .invoice-container__circle--black{
+  background-color: v.$white;
+  }
 }
