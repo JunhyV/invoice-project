@@ -22,27 +22,17 @@
       cursor: pointer;
     }
   }
-  &__days {
-    @include m.flex(1rem);
-  }
 
-  &__grid-days,
-  &__grid-date {
+  &__grid-days {
     @include m.grid(7, 1rem);
     align-items: center;
     justify-items: center;
-    & li {
-      font-size: 1.2rem;
-    }
   }
   &__available {
     &:hover {
       color: v.$purple;
       cursor: pointer;
     }
-  }
-  .active {
-    color: v.$purple;
   }
 
   &__inactive {

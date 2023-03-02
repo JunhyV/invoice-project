@@ -111,6 +111,10 @@ li {
   height: 4.8rem;
 }
 
+.active {
+  color: #7C5DFA;
+}
+
 .aside {
   display: flex;
   background-color: #373B53;
@@ -179,6 +183,9 @@ li {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.header__filter:hover {
+  cursor: pointer;
 }
 .header__btn {
   width: 9rem;
@@ -283,6 +290,44 @@ li {
   width: 18rem;
 }
 
+.filter-by-status {
+  width: 14rem;
+  position: absolute;
+  top: 9rem;
+  right: 9rem;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.filter-by-status__btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.filter-by-status__btn h3 {
+  font-size: 1.2rem;
+}
+.filter-by-status__square {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #dfe3fa;
+  border-radius: 2px;
+  position: relative;
+}
+.filter-by-status__square:hover {
+  border: 1px solid #7C5DFA;
+}
+.check {
+  height: 100%;
+  width: 100%;
+  padding: 0.3rem;
+  background-color: #7C5DFA;
+}
+
 .darkmode {
   background-color: #141625;
   color: #FFF;
@@ -312,6 +357,10 @@ li {
   background-color: #252945;
   color: white;
   border: 0.2rem solid #1E2139;
+}
+.darkmode .invoice input:focus-visible {
+  border: 0.2rem solid #7C5DFA;
+  outline: none;
 }
 .darkmode .invoice input::-moz-placeholder {
   color: white;
@@ -347,6 +396,17 @@ li {
   background: #252945;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+}
+.darkmode .filter-by-status {
+  background: #252945;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+.darkmode .filter-by-status__btn {
+  color: #FFF;
+}
+.darkmode .filter-by-status__square {
+  background: #1e2139;
+  border-radius: 2px;
 }
 
 .invoice {
@@ -571,12 +631,7 @@ li {
 .calendar__month img:hover {
   cursor: pointer;
 }
-.calendar__days {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.calendar__grid-days, .calendar__grid-date {
+.calendar__grid-days {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -584,15 +639,9 @@ li {
   align-items: center;
   justify-items: center;
 }
-.calendar__grid-days li, .calendar__grid-date li {
-  font-size: 1.2rem;
-}
 .calendar__available:hover {
   color: #7C5DFA;
   cursor: pointer;
-}
-.calendar .active {
-  color: #7C5DFA;
 }
 .calendar__inactive {
   color: #888EB0;

@@ -26,3 +26,9 @@ Version 1.4
 Version 1.5
 1.- Agregado el calendario
 2.- Calendario funcionando
+
+Version 1.6
+1.- Establecido useCalendar
+2.- Establecido componente filter 
+3.- Arreglado los inputs
+4.- Finalizado el calendario

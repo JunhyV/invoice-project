@@ -11,44 +11,44 @@ const BillTo = () => {
     <div className="invoice-form__bill-to">
       <div className="invoice-form__input-container">
         <label>Client's Name</label>
-        <input type="name" placeholder="Client's Name" />
+        <input type="name"  />
       </div>
       {/* Client's Name */}
 
       <div className="invoice-form__input-container">
         <label>Client's Email</label>
-        <input type="email" placeholder="email@gmail.com" />
+        <input type="email"  />
       </div>
       {/* Client's Email */}
 
       <div className="invoice-form__input-container">
         <label>Street Address</label>
-        <input type="street" placeholder="Address" />
+        <input type="street"  />
       </div>
       {/* Street Address */}
 
       <div className="invoice-form__input-container">
         <label>City</label>
-        <input type="city" placeholder="City" />
+        <input type="city"  />
       </div>
       {/* City */}
 
       <div className="invoice-form__input-container">
         <label>Post Code</label>
-        <input type="zip" placeholder="Post Code" />
+        <input type="zip"  />
       </div>
       {/* Post Code */}
 
       <div className="invoice-form__input-container">
         <label>Country</label>
-        <input type="country" placeholder="Country" />
+        <input type="country"  />
       </div>
       {/* Country */}
 
       <div className="invoice-form__input-container input-date">
         <label>Invoice Date</label>
         <div className="invoice-form__fake-input" onClick={() => setCalendar(!calendar)}>
-          21 Aug 2021
+          <p></p>
             <img src={calendarIcon} alt="calendar-img" />
         </div>
         {calendar ? <Calendar/> : null}
@@ -60,14 +60,14 @@ const BillTo = () => {
         <div className="invoice-form__fake-input" onClick={()=>setPayment(!payment)}>
           Select Option <img src={arrowDown} alt="filter-arrow" />
         </div>
-        {payment ? <Payment/> : null}
+        {payment ? <Payment data={payment} set={setPayment}/> : null}
         
       </div>
       {/* Payment Terms */}
 
       <div className="invoice-form__input-container">
         <label>Project Description</label>
-        <input type="text" placeholder="Graphic Design Service" />
+        <input type="text"  />
       </div>
       {/* Project Description */}
     </div>

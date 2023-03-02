@@ -13,13 +13,28 @@ export const months = [
   "Dec",
 ];
 
-export const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];;
 
-export const date = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28, 29, 30, 31,
-];
+export const getNumberOfDaysInMonth = (year, month) => {
+  return new Date(year, month + 1, 0).getDate();
+}
 
-export const prevDate = [31, 30, 29, 28, 27, 25, 24, 23];
+export const getSortedDays = (year, month) => {
+  const dayIndex = new Date(year, month).getDay();
+  const firstHalf = dayNames.slice(dayIndex);
+  return [...firstHalf, ...dayNames.slice(0, dayIndex)];
+}
 
-export const postDate = [1, 2, 3, 4, 5, 6];
+export const range = (start, end) => {
+  const length = Math.abs((end - start) / 1);
+
+  const {result} = Array.from({length}).reduce(
+    ({result, current}) => ({
+      result: [...result, current],
+      current: current + 1,
+    }),
+    {result: [], current: start}
+  );
+
+  return result;
+}

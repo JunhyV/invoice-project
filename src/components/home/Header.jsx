@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import arrowDown from "../../assets/icon-arrow-down.svg";
 import plus from "../../assets/icon-plus.svg";
+import FilterByStatus from "./FilterByStatus";
 
 const Header = ({data, set}) => {
+  const [filter, setFilter] = useState(false);
   return (
     <header className="header">
       <div>
@@ -10,10 +12,11 @@ const Header = ({data, set}) => {
         <p className="color-gray">x invoices</p>
       </div>
       <div className="header__btns">
-        <div className="header__filter">
+        <div className="header__filter" onClick={()=> setFilter(!filter)}>
           <h3>Filter</h3>
           <img src={arrowDown} alt="filter-arrow" />
         </div>
+          {filter ? <FilterByStatus/> : null}
         <button className="header__btn" onClick={() => set(!data)}>
           <div className="header__plus">
             <img src={plus} alt="btn-plus" />

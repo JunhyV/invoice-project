@@ -1,0 +1,45 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.filter-by-status {
+  width: 14rem;
+  position: absolute;
+  top: 9rem;
+  right: 9rem;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: 1rem;
+    background-color: transparent;
+    border: none;
+    & h3{
+          font-size: 1.2rem;  
+    }
+  }
+  &__square {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #dfe3fa;
+    border-radius: 2px;
+    position: relative;
+    &:hover{
+        border: 1px solid v.$purple;
+    }
+  }
+  &__btn {
+  }
+}
+
+.check{
+    height: 100%;
+    width: 100%;
+    padding: 0.3rem;
+  background-color: v.$purple;
+}

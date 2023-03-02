@@ -5,19 +5,19 @@ const BillFrom = () => {
     <div className="invoice-form__bill-from">
       <div className="invoice-form__input-container">
         <label>Street Address</label>
-        <input type="street" placeholder="Address" />
+        <input type="street" />
       </div>
       <div className="invoice-form__input-container">
         <label>City</label>
-        <input type="city" placeholder="City" />
+        <input type="city" />
       </div>
       <div className="invoice-form__input-container">
         <label>Post Code</label>
-        <input type="zip" placeholder="Post Code" />
+        <input type="zip" />
       </div>
       <div className="invoice-form__input-container">
         <label>Country</label>
-        <input type="country" placeholder="Country" />
+        <input type="country" />
       </div>
     </div>
   );
