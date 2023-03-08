@@ -1,0 +1,94 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.invoice-data {
+  & p {
+    color: v.$gray;
+  }
+
+  &__link {
+    display: flex;
+    gap: 1rem;
+    padding: v.$mb-padding;
+    padding-bottom: 0;
+  }
+  &__status {
+    margin: v.$mb-padding;
+    padding: v.$mb-padding;
+    background-color: v.$white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9rem;
+  }
+  &__content {
+    margin: v.$mb-padding;
+    margin-bottom: v.$mb-padding * 2;
+    background: v.$white;
+    padding: v.$mb-padding;
+  }
+  &__first-content {
+    @include m.flex(2rem);
+  }
+  &__second-content {
+    @include m.grid(2, 1rem);
+    align-items: center;
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+  &__third-content {
+    @include m.grid(1, 0);
+    & div:nth-child(1){
+        border-radius: 8px 8px 0px 0px;
+    }
+  }
+  &__item {
+    @include m.grid(2, 0.5rem);
+    padding: v.$mb-padding;
+    height: 8rem;
+    grid-auto-flow: dense;
+    background: #f9fafe;
+
+    & h3:nth-child(3) {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      justify-self: end;
+      align-self: center;
+    }
+  }
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: v.$mb-padding;
+    height: 8rem;
+    background: #373b53;
+    border-radius: 0px 0px 8px 8px;
+    & h1,
+    p {
+      color: v.$white;
+    }
+  }
+  &__btns {
+    background-color: v.$white;
+    height: 9rem;
+    @include m.flex-center;
+    gap: 1rem;
+  }
+  &__edit{
+    @include m.invoiceContainer( #F9FAFE, v.$gray, #DFE3FA);
+    min-width: 7rem;
+  }
+  &__delete{
+    @include m.invoiceContainer( v.$orange, v.$darkmode-gray, v.$light-orange);
+    min-width: 9rem;
+  }
+  &__mark{
+    @include m.invoiceContainer( v.$purple, v.$darkmode-gray, v.$light-purple);
+    min-width: 13rem;
+  }
+}
+
+
+

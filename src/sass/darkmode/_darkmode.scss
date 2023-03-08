@@ -34,8 +34,8 @@
     background-color: v.$darkmode-input;
     color: white;
     border: 0.2rem solid v.$darkmode-container;
-    
-    &:focus-visible{
+
+    &:focus-visible {
       border: 0.2rem solid v.$purple;
       outline: none;
     }
@@ -86,10 +86,35 @@
       border-radius: 2px;
     }
   }
-  .invoice-container__status--black{
+  .invoice-container__status--black {
     color: v.$white;
   }
-  .invoice-container__circle--black{
-  background-color: v.$white;
+  .invoice-container__circle--black {
+    background-color: v.$white;
+  }
+  .invoice-data__btns {
+    background: #1e2139;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  }
+  .invoice-data__edit {
+    @include m.invoiceContainer(v.$darkmode-input, v.$darkmode-gray, v.$white);
+  }
+  .invoice-data {
+    &__back {
+      color: v.$white;
+    }
+    & p {
+      color: #dfe3fa;
+    }
+  }
+  .invoice-data__status,
+  .invoice-data__content {
+    background-color: v.$darkmode-container;
+  }
+  .invoice-data__item {
+    background-color: v.$darkmode-input;
+  }
+  .invoice-data__total {
+    background-color: v.$black;
   }
 }

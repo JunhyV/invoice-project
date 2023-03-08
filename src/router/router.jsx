@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createHashRouter } from "react-router-dom";
 import Error from "../layout/Error";
 import LayoutPublic from "../layout/LayoutPublic";
 import Home from "../pages/Home";
 import Invoice from "../pages/InvoicePage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <LayoutPublic />,
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/invoice',
+        path: '/invoice/:id',
         element: <Invoice/>
       }
     ],

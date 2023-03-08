@@ -18,10 +18,8 @@ const InvoiceContainer = ({data}) => {
     statusClass = "invoice-container__status--black";
     statusCircle = "invoice-container__circle--black"; 
   }
-
-console.log(status);
   return (
-    <Link to='/invoice' className="invoice-container link">
+    <Link state={data} to={`/invoice/${id}`} className="invoice-container link">
       <h3>
         <span className="color-dark-gray">#</span>{id}
       </h3>
